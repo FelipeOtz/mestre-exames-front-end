@@ -4,6 +4,6 @@ import Styles from "../styles/Login";
 
 export default () => {
     return(
-      <View><Text style={Styles.container}>Hello meu pau World</Text></View>
+      <View style={Styles.container}><Text>Hello meu pau World</Text></View>
     )
   };

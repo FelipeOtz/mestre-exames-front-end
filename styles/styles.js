@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, StatusBar } from "react-native";
 
 export default StyleSheet.create({
     container: {
@@ -6,5 +6,6 @@ export default StyleSheet.create({
         backgroundColor: "#fff",
         alignItems: "center",
         justifyContent: "center",
+        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0
       },
 })
