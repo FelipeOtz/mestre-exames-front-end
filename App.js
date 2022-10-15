@@ -9,8 +9,8 @@ import Welcome from "./src/Welcome";
 export default function App() {
   return (
     <SafeAreaView style={Styles.container}>
-      {/* <Login/> */}
-      <Welcome/>
+      <Login/>
+      {/* <Welcome/> */}
     </SafeAreaView>
   );
 }
