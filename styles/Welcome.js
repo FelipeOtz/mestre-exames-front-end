@@ -11,7 +11,7 @@ export default StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'space-around',
-        
+        paddingVertical: '15%'
       },
       primaryText:{
         color: '#FFF',
