@@ -1,13 +1,19 @@
-import { StatusBar } from "expo-status-bar";
-import { SafeAreaView, StyleSheet, Text, View } from "react-native";
-import Styles from "./styles/styles";
+import * as React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { Text, View } from "react-native";
 import Welcome from "./src/Welcome";
 import Login from "./src/Login";
+import { createStackNavigator } from "@react-navigation/stack";
+
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <SafeAreaView style={Styles.container}>
-      <Login />
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Welcome" component={Welcome} />
+        <Stack.Screen name="Login" component={Login} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
