@@ -31,22 +31,25 @@ export default StyleSheet.create({
    },
    title:{
      fontSize: 24,
+     alignItems: "center",
+     justifyContent: "center",
      fontWeight: 'bold',
      color: '#3785F4',
      marginTop: 28,
      marginBottom: 12,
    },
    text:{
-     color: '#a1a1a1'
+     color: '#a1a1a1',
+     paddingStart: 10,
+     color: '#3785F4',
    },
    button:{
      position: 'absolute',
      backgroundColor: '#3785F4',
-     borderRadius: 50,
      paddingVertical: 8,
-     width: '60%',
+     width: '80%',
      alignSelf: 'center',
-     bottom: '15%',
+     bottom: '35%',
      alignItems: 'center',
      justifyContent: 'center'
    },
@@ -60,5 +63,15 @@ export default StyleSheet.create({
      margin: 12,
      borderWidth: 1,
      padding: 10,
+     width: 250,
+     borderRadius: 5,
+     borderColor: '#3785F4',
    },
+   forgot:{
+    color: '#F9C259',
+    paddingStart: 10
+   },
+   link:{
+    paddingStart: 25,
+   }
 });
