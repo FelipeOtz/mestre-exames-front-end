@@ -44,12 +44,10 @@ export default StyleSheet.create({
      color: '#3785F4',
    },
    button:{
-     position: 'absolute',
      backgroundColor: '#3785F4',
      paddingVertical: 8,
      width: '80%',
      alignSelf: 'center',
-     bottom: '35%',
      alignItems: 'center',
      justifyContent: 'center'
    },
@@ -72,6 +70,32 @@ export default StyleSheet.create({
     paddingStart: 10
    },
    link:{
-    paddingStart: 25,
-   }
+    position: "absolute",
+    bottom: 100,
+    paddingStart: 105,
+    color: "#939CAA"
+   },
+   links: {
+    width: '80%',
+    alignItems: 'center',
+    flex: 1,
+    flexDirection: "row",
+   },
+   buttonTwitter:{
+    backgroundColor: '#1DA1F2',
+    paddingVertical: 8,
+    width: '50%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: 50
+   },
+   buttonFacebook:{
+    backgroundColor: '#4267B2',
+    paddingVertical: 8,
+    width: '50%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: "row",
+    flex: 1
+   },
 });
