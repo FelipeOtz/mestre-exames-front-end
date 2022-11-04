@@ -35,7 +35,7 @@ export default StyleSheet.create({
      justifyContent: "center",
      fontWeight: 'bold',
      color: '#3785F4',
-     marginTop: 28,
+     marginTop: 15,
      marginBottom: 12,
    },
    text:{
@@ -71,7 +71,7 @@ export default StyleSheet.create({
    },
    link:{
     position: "absolute",
-    bottom: 100,
+    bottom: 150,
     paddingStart: 105,
     color: "#939CAA"
    },
