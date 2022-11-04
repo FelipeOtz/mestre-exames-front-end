@@ -34,13 +34,13 @@ export default function Login() {
         <Text style={Styles.link}>Ou entrar usando</Text>
         <View style={Styles.links}>
           <TouchableOpacity style={Styles.buttonTwitter}>
-            <Text style={Styles.buttonText}>Twitter</Text>
+            <Text style={Styles.buttonTexti}>Twitter</Text>
           </TouchableOpacity>
           <TouchableOpacity style={Styles.buttonFacebook}>
             <Image source={require('../assets/facebook-3-256 1.svg')}
-          style={{ width: 20, height: 20 }}
+          style={{ width: 100, height: 20 }}
           resizeMode="contain"/>
-            <Text style={Styles.buttonText}>Facebook</Text>
+            <Text style={Styles.buttonTexti}>Facebook</Text>
           </TouchableOpacity>
         </View>
       </View>

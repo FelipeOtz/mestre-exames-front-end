@@ -92,10 +92,15 @@ export default StyleSheet.create({
    buttonFacebook:{
     backgroundColor: '#4267B2',
     paddingVertical: 8,
-    width: '50%',
+    width: '80%',
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: "row",
     flex: 1
    },
+   buttonTexti:{
+    fontSize: 12,
+    color: '#FFF',
+    fontWeight: 'bold'
+  },
 });
