@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, Image, TouchableOpacity, TextInput } from "react-native";
+import { View, Text, StyleSheet, Image, TouchableOpacity, TextInput, Alert } from "react-native";
 import Styles from "../styles/Login";
 
 export default function Login() {
@@ -31,18 +31,34 @@ export default function Login() {
         <TouchableOpacity style={Styles.button}>
           <Text style={Styles.buttonText}>Entrar</Text>
         </TouchableOpacity>
-        <Text style={Styles.link}>Ou entrar usando</Text>
-        <View style={Styles.links}>
-          <TouchableOpacity style={Styles.buttonTwitter}>
-            <Text style={Styles.buttonTexti}>Twitter</Text>
+        
+        <Text style={Styles.enterUsing}>Ou entrar usando</Text>
+        <View style={Styles.socialButtons}>
+          <TouchableOpacity style={Styles.link} onPress={() => Alert.alert('MSG', 'Clickou')}>
+            
+          <Image
+              source={require('../assets/twitter-256-1.png')}
+              style={Styles.mediaIcon}
+            />
+            <Text style={Styles.linkTxt}>Twitter</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={Styles.buttonFacebook}>
-            <Image source={require('../assets/facebook-3-256 1.svg')}
-          style={{ width: 100, height: 20 }}
-          resizeMode="contain"/>
-            <Text style={Styles.buttonTexti}>Facebook</Text>
+          <TouchableOpacity style={[Styles.link, {backgroundColor: '#4267B2'}]} onPress={() => Alert.alert('MSG', 'CLICKOU')}>
+          <Image
+              source={require('../assets/facebook-3-2560-1.png')}
+              style={Styles.mediaIcon}
+            />
+          <Text style={Styles.linkTxt}>Facebook</Text>
           </TouchableOpacity>
         </View>
+        <View style={Styles.cadastreSe}>
+        <Text style={Styles.dontHaveAccount}> Não Tem uma Conta? </Text>
+            <TouchableOpacity
+              onPress={()=> Alert.alert('MSG', 'Vai pra tela de Cadastro')}
+            >
+              <Text style={{color: '#F9C259', fontWeight: 'bold'}}>Cadastre-se</Text>
+            </TouchableOpacity>
+        </View>
+
       </View>
     </View>
   );

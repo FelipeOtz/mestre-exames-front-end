@@ -29,11 +29,12 @@ const styles = StyleSheet.create({
     height: 310,
   },
   body: {
+    width: '100%',
     color: "#FFF",
     fontSize: 18,
     paddingHorizontal: 10,
     position: 'absolute',
-    bottom: '1%',
+    bottom: '5%',
     fontWeight: 'bold',
     textAlign: 'center',
   }

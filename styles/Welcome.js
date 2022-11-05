@@ -11,11 +11,13 @@ export default StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "space-around",
-    paddingVertical: "15%",
+    paddingVertical: "20%",
   },
   primaryText: {
-    color: "#000",
-    fontSize: 18,
+    color: "#FFF",
+    fontSize: 16,
+    fontWeight: 'bold',
+    textTransform: 'uppercase'
   },
   secondaryText: {
     color: defaultYellow,

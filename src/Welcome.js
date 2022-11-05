@@ -11,14 +11,14 @@ const Welcome = ({ navigation }) => (
       style={Styles.logo}
     />
     <CarouselCards />
-    <Text style={Styles.primaryText}>Carrossel carr oss seel Carr.</Text>
-    <View>
+    <Text style={Styles.primaryText}>Exames médicos sem complicação</Text>
+  <View>
       <Button
         color="#f9c259"
         title="Começar"
         onPress={() => navigation.navigate("Login")}
       />
-      <Text style={Styles.secondaryText}>Carrossel carr oss seel Carr.</Text>
+      <Text style={Styles.secondaryText}>Faça login ou crie sua conta</Text>
     </View>
   </View>
 );
