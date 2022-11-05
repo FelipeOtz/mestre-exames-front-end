@@ -74,7 +74,6 @@ export default function Card() {
         data={agendamentos}
         keyExtractor={(item) => item.id}
         renderItem={renderItem}
-        
       />
     </View>
   );

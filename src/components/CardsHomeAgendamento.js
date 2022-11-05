@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { View, Text, FlatList, Image } from "react-native";
-import Styles from "../../styles/Agendamentos";
+import Styles from "../../styles/home";
 import agendamentos from "./DataAgendamentos";
 
 //id, status, nome, icone, undidade, data, hora
@@ -35,20 +35,6 @@ const renderItem = ({ item }) => {
           <View>
             <Text style={Styles.primary}>{nome}</Text>
           </View>
-        </View>
-        <View>
-          <Text
-            style={{
-              textTransform: "uppercase",
-              padding: 5,
-              backgroundColor: color,
-              width: 100,
-              textAlign: "center",
-              fontWeight: "bold",
-            }}
-          >
-            {status}
-          </Text>
         </View>
       </View>
       <View>
