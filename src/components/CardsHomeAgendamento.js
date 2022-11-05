@@ -45,7 +45,6 @@ const renderItem = ({ item }) => {
               width: 100,
               textAlign: "center",
               fontWeight: "bold",
-              // color: '#FFF'
             }}
           >
             {status}
@@ -74,7 +73,7 @@ export default function Card() {
         data={agendamentos}
         keyExtractor={(item) => item.id}
         renderItem={renderItem}
-        
+        horizontal={true}
       />
     </View>
   );

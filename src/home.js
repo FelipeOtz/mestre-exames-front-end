@@ -1,20 +1,15 @@
 import React from "react";
 import { View, Text, Button, Image, TouchableOpacity } from "react-native";
 import Styles from "../styles/home";
+import CardsAgendamento from "./components/CardsHomeAgendamento";
 
 const Home = ({ navigation }) => (
+  
   <View style={Styles.container}>
     <View style={Styles.panel}>
-      <View style={Styles.card}>
-        <View style={Styles.cardTop}></View>
-      </View>
-      <View style={Styles.card}>
-        <View style={Styles.cardTop}></View>
-      </View>
-      <View style={Styles.card}>
-        <View style={Styles.cardTop}></View>
-      </View>
+      <CardsAgendamento />
     </View>
   </View>
+
 );
 export default Home;
