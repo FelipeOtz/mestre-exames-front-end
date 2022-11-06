@@ -11,12 +11,22 @@ import {
   Alert,
   Button,
 } from "react-native";
+import DateTimePicker from "@react-native-community/datetimepicker";
 
 import Styles from "../styles/cadastro";
 
 export default function Cadastro({ navigation }) {
-  const [date, setDate] = useState(new Date())
-  const [open, setOpen] = useState(false)
+  const [date, setDate] = useState(new Date());
+  const [show, setShow] = useState(Platform.OS === "ios" ? true : false);
+
+  const onChange = (event, selectedDate) => {
+    const currentDate = selectedDate;
+    setDate(currentDate);
+
+    setShow(Platform.OS === "android" ? false : show);
+    console.log(event.type);
+  };
+
   return (
     <View style={Styles.container}>
       <View style={Styles.image}>
@@ -43,18 +53,47 @@ export default function Cadastro({ navigation }) {
             secureTextEntry={true}
           />
           <Text style={Styles.text}>Data de Nascimento</Text>
-          <DatePicker
-            modal
-            open={open}
-            date={date}
-            onConfirm={(date) => {
-              setOpen(false)
-              setDate(date)
-            }}
-            onCancel={() => {
-              setOpen(false)
-            }}
-          />
+
+          <View>
+            {Platform.OS === "android" && (
+              <>
+                <TouchableOpacity
+                  style={Styles.button}
+                  onPress={() => setShow(true)}
+                >
+                  <Text style={Styles.buttonText}>
+                    {date.getDate()}/{date.getMonth() + 1}/{date.getFullYear()}
+                  </Text>
+                </TouchableOpacity>
+              </>
+            )}
+
+            {show && (
+              <View
+                style={{
+                  backgroundColor: "#FFFFFF",
+                  width: 70,
+                  justifyContent: "center",
+                  alignSelf: "center",
+                  alignItems: "center",
+                  paddingRight: 90,
+                  borderRadius: 30,
+                }}
+              >
+                <DateTimePicker
+                  style={{
+                    width: 200,
+                  }}
+                  testID="dateTimePicker"
+                  value={date}
+                  mode={"date"}
+                  is24Hour={true}
+                  onChange={onChange}
+                />
+              </View>
+            )}
+          </View>
+
           <Text style={Styles.text}>Celular</Text>
           <TextInput style={Styles.input} />
 
@@ -65,10 +104,15 @@ export default function Cadastro({ navigation }) {
             <Text style={Styles.buttonText}>Avançar</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity
-            onPress={() => navigation.navigate("Login")}
-          >
-            <Text style={{ color: "#F9C259", fontWeight: "bold", alignSelf: "center", paddingTop: 10 }}>
+          <TouchableOpacity onPress={() => navigation.navigate("Login")}>
+            <Text
+              style={{
+                color: "#F9C259",
+                fontWeight: "bold",
+                alignSelf: "center",
+                paddingTop: 10,
+              }}
+            >
               Ou logar
             </Text>
           </TouchableOpacity>
