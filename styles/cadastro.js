@@ -79,7 +79,7 @@ export default StyleSheet.create({
     marginHorizontal: "5%",
   },
   enterUsing: {
-    marginTop: "25%",
+    marginTop: "10%",
     color: "#939CAA",
     alignSelf: "center",
     fontSize: 16,

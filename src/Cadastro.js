@@ -9,6 +9,7 @@ import {
   TouchableOpacity,
   TextInput,
   Alert,
+  Button,
 } from "react-native";
 
 import Styles from "../styles/cadastro";
@@ -62,39 +63,13 @@ export default function Cadastro({ navigation }) {
           <Text style={Styles.buttonText}>Avançar</Text>
         </TouchableOpacity>
 
-        <Text style={Styles.enterUsing}>Ou Logar</Text>
-        <View style={Styles.socialButtons}>
-          <TouchableOpacity
-            style={Styles.link}
-            onPress={() => Alert.alert("MSG", "Clickou")}
+        <TouchableOpacity
+            onPress={() => navigation.navigate("Login")}
           >
-            <Image
-              source={require("../assets/twitter-256-1.png")}
-              style={Styles.mediaIcon}
-            />
-            <Text style={Styles.linkTxt}>Twitter</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={[Styles.link, { backgroundColor: "#4267B2" }]}
-            onPress={() => Alert.alert("MSG", "CLICKOU")}
-          >
-            <Image
-              source={require("../assets/facebook-3-2560-1.png")}
-              style={Styles.mediaIcon}
-            />
-            <Text style={Styles.linkTxt}>Facebook</Text>
-          </TouchableOpacity>
-        </View>
-        <View style={Styles.cadastreSe}>
-          <Text style={Styles.dontHaveAccount}> Não Tem uma Conta? </Text>
-          <TouchableOpacity
-            onPress={() => Alert.alert("MSG", "Vai pra tela de Cadastro")}
-          >
-            <Text style={{ color: "#F9C259", fontWeight: "bold" }}>
-              Cadastre-se
+            <Text style={{ color: "#F9C259", fontWeight: "bold", alignSelf: "center", paddingTop: 10 }}>
+             Ou logar
             </Text>
           </TouchableOpacity>
-        </View>
       </View>
     </View>
   );
