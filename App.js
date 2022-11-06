@@ -8,6 +8,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Home from "./src/home";
 import Menu from "./src/menu";
 import cadastro from "./src/Cadastro";
+import Chat from './src/Chat';
 
 const Stack = createStackNavigator();
 
@@ -21,5 +22,6 @@ export default function App() {
         <Stack.Screen name="Menu" component={Menu} />
       </Stack.Navigator>
     </NavigationContainer>
+    // <Chat/>
   );
 }
