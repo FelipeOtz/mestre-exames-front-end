@@ -12,31 +12,35 @@ import {
   Button,
 } from "react-native";
 
-import Styles from "../styles/cadastro";
+import Styles from "../styles/cadastro3";
 
-export default function Cadastro2({ navigation }) {
+export default function Cadastro3({ navigation }) {
     const [date, setDate] = useState(new Date())
     const [open, setOpen] = useState(false)
     return (
     <View style={Styles.container}>
       <View style={Styles.image}>
         <Image
-          source={require("../assets/21_02_Data-security_81.png")}
-          style={{ width: 250, height: 150 }}
+          source={require("../assets/508191.png")}
+          style={{ width: 100, height: 100 }}
           resizeMode="contain"
         />
       </View>
       <View style={Styles.containerForm}>
-
-        <Text style={Styles.text}>Celular de Recado</Text>
+        <View style={Styles.title}>
+          <Text style={Styles.title}>Domicilio</Text>
+        </View>
+        <Text style={Styles.text}>Estado</Text>
         <TextInput style={Styles.input} />
-        <Text style={Styles.text}>CPF</Text>
+        <Text style={Styles.text}>Cidade</Text>
         <TextInput style={Styles.input} />
-        <Text style={Styles.text}>Convênio</Text>
+        <Text style={Styles.text}>Bairro</Text>
         <TextInput style={Styles.input} />
-        <Text style={Styles.text}>Sexo</Text>
+        <Text style={Styles.text}>Nº de Residencia</Text>
         <TextInput style={Styles.input} />
-        <Text style={Styles.text}>Algum problema de saude</Text>
+        <Text style={Styles.text}>Cep</Text>
+        <TextInput style={Styles.input} />
+        <Text style={Styles.text}>Complemento</Text>
         <TextInput style={Styles.input} />
 
         <TouchableOpacity

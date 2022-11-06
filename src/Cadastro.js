@@ -15,61 +15,64 @@ import {
 import Styles from "../styles/cadastro";
 
 export default function Cadastro({ navigation }) {
-    const [date, setDate] = useState(new Date())
-    const [open, setOpen] = useState(false)
-    return (
+  const [date, setDate] = useState(new Date())
+  const [open, setOpen] = useState(false)
+  return (
     <View style={Styles.container}>
       <View style={Styles.image}>
         <Image
-          source={require("../assets/TaeAugust11 1.svg")}
-          style={{ width: 100, height: 100 }}
+          source={require("../assets/TaeAugust111.png")}
+          style={{ width: 300, height: 150 }}
           resizeMode="contain"
         />
       </View>
+
       <View style={Styles.containerForm}>
-        <View style={Styles.title}>
-          <Text style={Styles.title}>Cadastro</Text>
-        </View>
-        <Text style={Styles.text}>Nome</Text>
-        <TextInput style={Styles.input} />
-        <Text style={Styles.text}>Email</Text>
-        <TextInput style={Styles.input} />
-        <Text style={Styles.text}>Senha</Text>
-        <TextInput
-          style={Styles.input}
-          autoComplete="password"
-          secureTextEntry={true}
-        />
-        <Text style={Styles.text}>Senha</Text>
-        <DatePicker
+        <View style={Styles.fundo}>
+          <View style={Styles.title}>
+            <Text style={Styles.title}>Cadastro</Text>
+          </View>
+          <Text style={Styles.text}>Nome</Text>
+          <TextInput style={Styles.input} />
+          <Text style={Styles.text}>Email</Text>
+          <TextInput style={Styles.input} />
+          <Text style={Styles.text}>Senha</Text>
+          <TextInput
+            style={Styles.input}
+            autoComplete="password"
+            secureTextEntry={true}
+          />
+          <Text style={Styles.text}>Data de Nascimento</Text>
+          <DatePicker
             modal
             open={open}
             date={date}
             onConfirm={(date) => {
-            setOpen(false)
-            setDate(date)
+              setOpen(false)
+              setDate(date)
             }}
             onCancel={() => {
-            setOpen(false)
+              setOpen(false)
             }}
-        />
-        <Text style={Styles.text}>Celular</Text>
-        <TextInput style={Styles.input} />
+          />
+          <Text style={Styles.text}>Celular</Text>
+          <TextInput style={Styles.input} />
 
-        <TouchableOpacity
-          style={Styles.button}
-          onPress={() => navigation.navigate("Menu")}
-        >
-          <Text style={Styles.buttonText}>Avançar</Text>
-        </TouchableOpacity>
+          <TouchableOpacity
+            style={Styles.button}
+            onPress={() => navigation.navigate("Cadastro2")}
+          >
+            <Text style={Styles.buttonText}>Avançar</Text>
+          </TouchableOpacity>
 
-        <TouchableOpacity
+          <TouchableOpacity
             onPress={() => navigation.navigate("Login")}
           >
             <Text style={{ color: "#F9C259", fontWeight: "bold", alignSelf: "center", paddingTop: 10 }}>
-             Ou logar
+              Ou logar
             </Text>
           </TouchableOpacity>
+        </View>
       </View>
     </View>
   );

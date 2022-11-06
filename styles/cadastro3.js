@@ -14,12 +14,7 @@ export default StyleSheet.create({
     paddingStart: 10,
   },
   image: {
-    alignItems: "center",
-  },
-  fundo: {
-    backgroundColor: "#3785F4",
-    borderTopLeftRadius: 25,
-    borderTopRightRadius: 25,
+    alignItems: "center"
   },
   containerLogo: {
     flex: 2,
@@ -40,38 +35,39 @@ export default StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     fontWeight: "bold",
-    color: "#FFF",
-    marginTop: 15,
-    marginBottom: 5,
+    color: "#3785F4",
+    marginTop: 1,
+    marginBottom: 1,
   },
   text: {
     color: "#a1a1a1",
     paddingStart: 10,
-    color: "#FFF",
+    color: "#3785F4",
   },
   button: {
-    backgroundColor: "#FFF",
+    backgroundColor: "#3785F4",
     paddingVertical: 8,
     width: "95%",
     alignSelf: "center",
     alignItems: "center",
     justifyContent: "center",
+    marginTop: 10
   },
   buttonText: {
     fontSize: 18,
-    color: "#2786B4",
+    color: "#FFF",
     fontWeight: "bold",
     width: "100%",
     textAlign: "center",
   },
   input: {
     height: 40,
-    margin: 12,
+    margin: 6,
     borderWidth: 1,
     padding: 10,
     width: "95%",
     borderRadius: 5,
-    borderColor: "#FFF",
+    borderColor: "#3785F4",
     alignSelf: "center",
   },
   forgot: {
@@ -133,7 +129,7 @@ export default StyleSheet.create({
   //  },
   buttonText: {
     fontSize: 12,
-    color: "#2786B4",
+    color: "#FFF",
     fontWeight: "bold",
   },
   cadastreSe: {
