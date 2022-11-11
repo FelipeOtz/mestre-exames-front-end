@@ -3,6 +3,7 @@ import { useState } from "react";
 import { View, Text, FlatList, Image } from "react-native";
 import Styles from "../../styles/home";
 import agendamentos from "./DataAgendamentos";
+import CardPin from "./homeCardPin";
 
 //id, status, nome, icone, undidade, data, hora
 
@@ -12,6 +13,24 @@ const renderItem = ({ item }) => {
   let nome = item.nome;
   let unidade = item.unidade;
   let data = item.data;
+  let dia = item.data.split("/")[0];
+  let mes = item.data.split("/")[1];
+  let ano = item.data.split("/")[2];
+  let meses = [
+    "Janeiro",
+    "Fevereiro",
+    "Março",
+    "Abril",
+    "Maio",
+    "Junho",
+    "Julho",
+    "Agosto",
+    "Setembro",
+    "Outubro",
+    "Novembro",
+    "Dezembro",
+  ];
+  let nomeMes = meses[mes - 1];
   let hora = item.hora;
   let icon = item.icon;
   let color = "#D1CFCF";
@@ -23,30 +42,14 @@ const renderItem = ({ item }) => {
   }
 
   return (
-    <View style={Styles.cardAgendamento}>
-      <View style={Styles.cardLine}>
-        <View>
-          <Image source={{ uri: icon }} style={Styles.examIcon} />
-        </View>
-        <View>
-          <View>
-            <Text style={Styles.primary}>{id} </Text>
-          </View>
-          <View>
-            <Text style={Styles.primary}>{nome}</Text>
-          </View>
-        </View>
+    <View style={Styles.card}>
+      <View style={Styles.cardHeader}>
+        <CardPin />
+        <Text style={Styles.cardTextHeader}>{nomeMes}</Text>
       </View>
-      <View>
-        <Text style={Styles.secondary}>Unidade: {unidade}</Text>
-      </View>
-      <View style={Styles.cardLine}>
-        <View>
-          <Text style={Styles.secondary}>{data}</Text>
-        </View>
-        <View>
-          <Text style={Styles.secondary}>{hora}</Text>
-        </View>
+
+      <View style={Styles.cardBlockShadow}>
+        <View style={Styles.cardBlock}></View>
       </View>
     </View>
   );
@@ -56,10 +59,13 @@ export default function Card() {
   return (
     <View>
       <FlatList
-        data={agendamentos}
+        data={agendamentos.filter(
+          (agendamento) => agendamento.status === "agendado"
+        )}
         keyExtractor={(item) => item.id}
         renderItem={renderItem}
         horizontal={true}
+        showsHorizontalScrollIndicator={false}
       />
     </View>
   );
