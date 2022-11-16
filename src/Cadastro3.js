@@ -45,12 +45,10 @@ export default function Cadastro3({ navigation }) {
 
         <TouchableOpacity
           style={Styles.button}
-          onPress={() => navigation.navigate("Cadastro3")}
+          onPress={() => navigation.navigate("Login")}
         >
           <Text style={Styles.buttonText}>Avançar</Text>
-        </TouchableOpacity>
-
-       
+        </TouchableOpacity>  
       </View>
     </View>
   );
