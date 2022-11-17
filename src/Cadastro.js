@@ -27,6 +27,25 @@ export default function Cadastro({ navigation }) {
     console.log(event.type);
   };
 
+const MENSAGEM_NOME = 'Digite a seu nome';
+const MENSAGEM_EMAIL = 'Digite o seu email';
+const MENSAGEM_SENHA = 'Digite sua senha';
+const MENSAGEM_CELULAR = 'Digite o seu celular';
+
+const Tela1 = ({ navigation}) => {
+  const [userNome, setUserNome] = useState('');
+  const [userEmail, setUserEmail] = useState('');
+  const [userSenha, setUserSenha] = useState('');
+  const [usertCelular, setUserCelular] = useState('');
+}
+
+let usuario = {
+  nome: userNome,
+  email: userEmail,
+  senha: userSenha,
+  celular: usertCelular,
+};
+
   return (
     <View style={Styles.container}>
       <View style={Styles.image}>
@@ -43,7 +62,9 @@ export default function Cadastro({ navigation }) {
             <Text style={Styles.title}>Cadastro</Text>
           </View>
           <Text style={Styles.text}>Nome</Text>
-          <TextInput style={Styles.input} />
+          <TextInput style={Styles.input} 
+          placeholder={MENSAGEM_NOME}
+          defaultValue={''}/>
           <Text style={Styles.text}>Email</Text>
           <TextInput style={Styles.input} />
           <Text style={Styles.text}>Senha</Text>
