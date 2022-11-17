@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { View, Text, FlatList, Image } from "react-native";
 import Styles from "../../styles/home";
 import agendamentos from "./DataAgendamentos";
@@ -48,8 +47,25 @@ const renderItem = ({ item }) => {
         <Text style={Styles.cardTextHeader}>{nomeMes}</Text>
       </View>
 
-      <View style={Styles.cardBlockShadow}>
-        <View style={Styles.cardBlock}></View>
+      <View style={Styles.cardSeparator}>
+        <Text style={Styles.cardDescText}>Dia</Text>
+        <View style={Styles.cardBlock}>
+          <Text style={Styles.cardBlockText}>05, Seg.</Text>
+        </View>
+      </View>
+
+      <View style={Styles.cardSeparator}>
+        <Text style={Styles.cardDescText}>Horário</Text>
+        <View style={Styles.cardBlock}>
+          <Text style={Styles.cardBlockText}>10:00 AM</Text>
+        </View>
+      </View>
+      <View style={Styles.examCard}>
+        <Text style={Styles.cardDescText}>Exame</Text>
+        <View style={Styles.examDesc}>
+          <Text style={Styles.cardBlockText}>{nome}</Text>
+          <Image source={{ uri: icon }} style={Styles.examIcon} />
+        </View>
       </View>
     </View>
   );

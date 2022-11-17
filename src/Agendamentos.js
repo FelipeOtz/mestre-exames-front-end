@@ -4,12 +4,12 @@ import CardsAgendamento from "./components/CardsAgendamento";
 import Styles from "../styles/Agendamentos";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-export default function () {
+export default function ({ navigation }) {
   return (
     <View style={Styles.container}>
       <View style={Styles.header}>
         <TouchableOpacity
-          onPress={() => Alert.alert("Clicou", "Clickou em Voltar")}
+          onPress={() => navigation.goBack()}
           underlayColor="transparent"
         >
           <Image
