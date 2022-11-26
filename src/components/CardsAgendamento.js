@@ -1,10 +1,12 @@
 import React from "react";
 import { useState } from "react";
-import { View, Text, FlatList, Image } from "react-native";
+import { View, Text, FlatList, Image, TouchableOpacity, Alert} from "react-native";
 import Styles from "../../styles/Agendamentos";
 import agendamentos from "./DataAgendamentos";
-
 //id, status, nome, icone, undidade, data, hora
+
+
+
 
 const renderItem = ({ item }) => {
   let id = item.id;
@@ -23,7 +25,31 @@ const renderItem = ({ item }) => {
   }
 
   return (
-    <View style={Styles.cardAgendamento}>
+    <TouchableOpacity
+      style={Styles.cardAgendamento}
+      underlayColor={"#FFF"}
+      onPress={() => { Alert.alert('Detalhes do Agendamento',
+        `${nome}\n\nID: ${id}\nStatus: ${status}\nUnidade: ${unidade}\nData: ${data} - ${hora}`,
+        [
+          {
+            text: 'Gerar PDF',
+            onPress: ()=> {console.log('Vai Gerar o PDF')}
+          },
+          {
+            text: 'Cancelar',
+            onPress: ()=> {console.log('Vai Cancelar o Exame')}
+          },
+        ],
+        {
+          cancelable: true
+        }
+          )
+        }
+      }
+    >
+
+
+
       <View style={Styles.cardLine}>
         <View>
           <Image source={{ uri: icon }} style={Styles.examIcon} />
@@ -63,7 +89,7 @@ const renderItem = ({ item }) => {
           <Text style={Styles.secondary}>{hora}</Text>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
