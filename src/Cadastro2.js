@@ -12,7 +12,7 @@ import {
   Button,
 } from "react-native";
 
-import Styles from "../styles/cadastro";
+import Styles from "../styles/cadastro2";
 
 export default function Cadastro2({ navigation }) {
   const [date, setDate] = useState(new Date())
@@ -29,7 +29,7 @@ export default function Cadastro2({ navigation }) {
 
       <View style={Styles.containerForm}>
         <View style={Styles.fundo}>
-          <Text style={Styles.text}>Celular de Recado</Text>
+          <Text style={Styles.textCima}>Celular de Recado</Text>
           <TextInput style={Styles.input} />
           <Text style={Styles.text}>CPF</Text>
           <TextInput style={Styles.input} />

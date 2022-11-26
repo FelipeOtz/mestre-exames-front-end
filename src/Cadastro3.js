@@ -15,9 +15,9 @@ import {
 import Styles from "../styles/cadastro3";
 
 export default function Cadastro3({ navigation }) {
-    const [date, setDate] = useState(new Date())
-    const [open, setOpen] = useState(false)
-    return (
+  const [date, setDate] = useState(new Date())
+  const [open, setOpen] = useState(false)
+  return (
     <View style={Styles.container}>
       <View style={Styles.image}>
         <Image
@@ -27,6 +27,7 @@ export default function Cadastro3({ navigation }) {
         />
       </View>
       <View style={Styles.containerForm}>
+        <View style={Styles.fundo}>
         <View style={Styles.title}>
           <Text style={Styles.title}>Domicilio</Text>
         </View>
@@ -48,8 +49,9 @@ export default function Cadastro3({ navigation }) {
           onPress={() => navigation.navigate("Login")}
         >
           <Text style={Styles.buttonText}>Avançar</Text>
-        </TouchableOpacity>  
+        </TouchableOpacity>
       </View>
     </View>
+    </View >
   );
 }

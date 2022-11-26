@@ -48,6 +48,13 @@ export default StyleSheet.create({
     color: "#a1a1a1",
     paddingStart: 10,
     color: "#FFF",
+
+  },
+  textCima: {
+    color: "#a1a1a1",
+    paddingStart: 10,
+    color: "#FFF",
+    marginTop: 55
   },
   button: {
     backgroundColor: "#FFF",
@@ -66,7 +73,7 @@ export default StyleSheet.create({
   },
   input: {
     height: 40,
-    margin: 9,
+    margin: 12,
     borderWidth: 1,
     padding: 10,
     width: "95%",
