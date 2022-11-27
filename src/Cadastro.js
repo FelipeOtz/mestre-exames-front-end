@@ -15,9 +15,43 @@ import DateTimePicker from "@react-native-community/datetimepicker";
 
 import Styles from "../styles/cadastro";
 
+
+const MENSAGEM_NOME = 'Digite o seu nome';
+const MENSAGEM_EMAIL = 'Digite o seu email';
+const MENSAGEM_SENHA = 'Digite a sua senha';
+const MENSAGEM_CELULAR = 'Digite o seu celular';
+
+
 export default function Cadastro({ navigation }) {
   const [date, setDate] = useState(new Date());
   const [show, setShow] = useState(Platform.OS === "ios" ? true : false);
+
+
+const [usrNome, setUsrNome] = useState('');
+const [usrEmail, setUsrEmail] = useState('');
+const [usrSenha, setUsrSenha] = useState('');
+const [usrCelular, setUsrCelular] = useState('');
+
+  let usuario = {
+    nome: usrNome,
+    cpf: "",
+    data_nasc: date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear(),
+    sexo: "",
+    observacao: "",
+    celular: usrCelular,
+    email: usrEmail,
+    celularrecado: "",
+    numero: "",
+    rua: "",
+    cep: "",
+    cidade: "",
+    estado: "",
+    bairro: "",
+    complemento: "",
+    senha: usrSenha,
+    convenio: ""
+  };
+
 
   const onChange = (event, selectedDate) => {
     const currentDate = selectedDate;
@@ -46,14 +80,17 @@ export default function Cadastro({ navigation }) {
           </View>
           <Text style={Styles.text}>Nome</Text>
           <TextInput style={Styles.input} 
-          defaultValue={''}/>
+          defaultValue={''}
+          onChangeText={(value) => setUsrNome(value)}/>
           <Text style={Styles.text}>Email</Text>
-          <TextInput style={Styles.input} />
+          <TextInput style={Styles.input}
+          onChangeText={(value) => setUsrEmail(value)} />
           <Text style={Styles.text}>Senha</Text>
           <TextInput
             style={Styles.input}
             autoComplete="password"
             secureTextEntry={true}
+            onChangeText={(value) => setUsrSenha(value)}
           />
           <Text style={Styles.text}>Data de Nascimento</Text>
 
@@ -98,12 +135,18 @@ export default function Cadastro({ navigation }) {
           </View>
 
           <Text style={Styles.text}>Celular</Text>
-          <TextInput style={Styles.input} />
+          <TextInput style={Styles.input}
+          onChangeText={(value) => setUsrCelular(value)} />
 
           <TouchableOpacity
             style={Styles.button}
-            onPress={() => navigation.navigate("Cadastro2")}
-          >
+            onPress={() =>
+              ValidateCadastro(
+                usrNome,
+                usrEmail,
+                usrSenha,
+                usrCelular,
+              ) && navigation.navigate('Cadastro2', usuario)}>
             <Text style={Styles.buttonText}>Avançar</Text>
           </TouchableOpacity>
 
@@ -124,3 +167,23 @@ export default function Cadastro({ navigation }) {
     </View>
   );
 }
+const ValidateCadastro = (NOME, EMAIL, SENHA, CELULAR) => {
+  if (NOME.trim().length === 0) {
+    alert(MENSAGEM_NOME);
+    return false;
+  }
+
+  if (EMAIL.trim().length === 0) {
+    alert(MENSAGEM_EMAIL);
+    return false;
+  }
+  if (SENHA.trim().length === 0) {
+    alert(MENSAGEM_SENHA);
+    return false;
+  }
+  if (CELULAR.trim().length === 0) {
+    alert(MENSAGEM_CELULAR);
+    return false;
+  }
+  return true;
+};

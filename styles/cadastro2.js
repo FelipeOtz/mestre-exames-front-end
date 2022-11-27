@@ -20,6 +20,7 @@ export default StyleSheet.create({
     backgroundColor: "#3785F4",
     borderTopLeftRadius: 25,
     borderTopRightRadius: 25,
+    height: "100%",
   },
   containerLogo: {
     flex: 2,
