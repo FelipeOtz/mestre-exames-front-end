@@ -11,7 +11,6 @@ export default StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     color: "orange",
-    paddingStart: 10,
   },
   image: {
     alignItems: "center",
@@ -32,8 +31,6 @@ export default StyleSheet.create({
     backgroundColor: "#FFF",
     borderTopLeftRadius: 25,
     borderTopRightRadius: 25,
-    paddingStart: "5%",
-    paddingEnd: "5%",
     width: "100%",
   },
   title: {
@@ -51,7 +48,7 @@ export default StyleSheet.create({
     color: "#FFF",
   },
   button: {
-    backgroundColor: "#FFF",
+    backgroundColor: "#F9C259",
     paddingVertical: 8,
     width: "95%",
     alignSelf: "center",
@@ -59,8 +56,8 @@ export default StyleSheet.create({
     justifyContent: "center",
   },
   buttonText: {
-    fontSize: 18,
-    color: "#2786B4",
+    fontSize: 15,
+    color: "#FFF",
     fontWeight: "bold",
     width: "100%",
     textAlign: "center",
@@ -134,11 +131,7 @@ export default StyleSheet.create({
   //   flexDirection: "row",
   //   flex: 1
   //  },
-  buttonText: {
-    fontSize: 12,
-    color: "#2786B4",
-    fontWeight: "bold",
-  },
+
   cadastreSe: {
     alignSelf: "center",
 

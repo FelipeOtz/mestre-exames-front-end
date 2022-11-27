@@ -139,7 +139,7 @@ const [usrCelular, setUsrCelular] = useState('');
           onChangeText={(value) => setUsrCelular(value)} />
 
           <TouchableOpacity
-            style={Styles.button}
+            style={Styles.button2}
             onPress={() =>
               ValidateCadastro(
                 usrNome,
@@ -147,7 +147,7 @@ const [usrCelular, setUsrCelular] = useState('');
                 usrSenha,
                 usrCelular,
               ) && navigation.navigate('Cadastro2', usuario)}>
-            <Text style={Styles.buttonText}>Avançar</Text>
+            <Text style={Styles.buttonText2}>Avançar</Text>
           </TouchableOpacity>
 
           <TouchableOpacity onPress={() => navigation.navigate("Login")}>

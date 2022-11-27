@@ -64,7 +64,7 @@ export default function Cadastro2({ navigation, route }) {
           onChangeText={(value) => setUsrObservacao(value)}/>
 
           <TouchableOpacity
-            style={Styles.button}
+            style={Styles.button2}
             onPress={() =>
               ValidateCadastro(
                 usrCelularRecado,

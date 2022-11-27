@@ -11,16 +11,18 @@ export default StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     color: "orange",
-    paddingStart: 10,
+
   },
   image: {
     alignItems: "center",
   },
   fundo: {
+    width: "100%",
     backgroundColor: "#3785F4",
     borderTopLeftRadius: 25,
     borderTopRightRadius: 25,
     height: "100%",
+    
   },
   containerLogo: {
     flex: 2,
@@ -32,8 +34,7 @@ export default StyleSheet.create({
     backgroundColor: "#FFF",
     borderTopLeftRadius: 25,
     borderTopRightRadius: 25,
-    paddingStart: "5%",
-    paddingEnd: "5%",
+
     width: "100%",
   },
   title: {
@@ -58,9 +59,17 @@ export default StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  buttonText: {
-    fontSize: 18,
-    color: "#2786B4",
+  button2: {
+    backgroundColor: "#F9C259",
+    paddingVertical: 8,
+    width: "80%",
+    alignSelf: "center",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  buttonText2: {
+    fontSize: 15,
+    color: "#FFF",
     fontWeight: "bold",
     width: "100%",
     textAlign: "center",
@@ -137,7 +146,8 @@ export default StyleSheet.create({
   buttonText: {
     fontSize: 12,
     color: "#2786B4",
-    fontWeight: "bold",
+    width: "100%",
+    textAlign: "center",
   },
   cadastreSe: {
     alignSelf: "center",
