@@ -74,7 +74,8 @@ export default StyleSheet.create({
     borderRadius: 5,
     borderColor: "#FFF",
     alignSelf: "center",
-    color: "#FFF",
+    backgroundColor: "#FFF",
+    color: "#000",
   },
   forgot: {
     color: "#F9C259",
