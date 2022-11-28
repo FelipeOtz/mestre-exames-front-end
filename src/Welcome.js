@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, Button, Image } from "react-native";
 import Styles from "../styles/Welcome";
 
-import CarouselCards from "./components/CarouselCards";
+
 
 const Welcome = ({ navigation }) => (
   <View style={Styles.homeContainer}>
@@ -10,7 +10,10 @@ const Welcome = ({ navigation }) => (
       source={require("../assets/logo-01-branco.png")}
       style={Styles.logo}
     />
-    <CarouselCards />
+    <Image
+      source={require("../assets/welcomeImg.png")}
+      style={{width: 330, height: 380}}
+    />
     <Text style={Styles.primaryText}>Exames médicos sem complicação</Text>
   <View>
       <Button
