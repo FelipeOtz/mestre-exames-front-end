@@ -125,5 +125,5 @@ const handleLogin = async (
     return;
   }
 
-  navigation.navigate("Menu");
+  navigation.navigate("Menu", usuario);
 };

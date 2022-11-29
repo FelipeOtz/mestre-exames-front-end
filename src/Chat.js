@@ -53,14 +53,14 @@ const renderItem = ({ item }) => {
   );
 };
 
-export default function () {
+export default function ({ navigation }) {
   const [text, setText] = useState("");
 
   return (
     <View style={Styles.container}>
       <View style={Styles.header}>
         <TouchableOpacity
-          onPress={() => Alert.alert("clicked", "clicked")}
+          onPress={() => navigation.goBack()}
           underlayColor="transparent"
         >
           <Image

@@ -9,46 +9,47 @@ import {
   TouchableOpacity,
   TextInput,
   Alert,
-  ScrollView
+  ScrollView,
 } from "react-native";
 
 import Styles from "../styles/Usuario";
 
 export default function Usuario({ navigation }) {
+  const [usrNome, setUsrNome] = useState("");
+  const [usrEmail, setUsrEmail] = useState("");
+  const [usrSenha, setUsrSenha] = useState("");
   return (
     <View style={Styles.container}>
-      <View style={Styles.header}>
-        <TouchableOpacity
-          onPress={() => navigation.goBack()}
-          underlayColor="transparent"
-        >
-          <Image
-            source={require("../assets/icons/return-arrow-1.png")}
-            style={Styles.icon}
-          />
-        </TouchableOpacity>
-        <Text style={Styles.title}>Perfil</Text>
-        <View></View>
-      </View>
       <View style={{ width: "100%", paddingHorizontal: 10, height: "85%" }}>
         <View style={Styles.dentro}>
           <View style={Styles.bordinha}>
             <Image
-              source={require("../assets/1000_F_126334093_IRINHGiBFVab4Kgw5jg6Av7qhBPqvSO4.jpg")}
+              source={require("../assets/account.png")}
               style={Styles.icons}
             />
             <Text style={Styles.text}>Nome</Text>
-            <TextInput style={Styles.input}
-              onChangeText={(value) => setUsrNome(value)} />
-              <Text style={Styles.text}>Email</Text>
-            <TextInput style={Styles.input}
-              onChangeText={(value) => setUsrNome(value)} />
-              <Text style={Styles.text}>Celular</Text>
-            <TextInput style={Styles.input}
-              onChangeText={(value) => setUsrNome(value)} />
+            <TextInput
+              style={Styles.input}
+              onChangeText={(value) => setUsrNome(value)}
+            />
+            <Text style={Styles.text}>Email</Text>
+            <TextInput
+              style={Styles.input}
+              onChangeText={(value) => setUsrNome(value)}
+            />
+            <Text style={Styles.text}>Celular</Text>
+            <TextInput
+              style={Styles.input}
+              onChangeText={(value) => setUsrNome(value)}
+            />
 
-            <TouchableOpacity style={Styles.button2}>
-            <Text style={Styles.buttonText}>Salvar</Text>
+            <TouchableOpacity
+              style={Styles.button2}
+              onPress={() => {
+                Alert.alert("Edição salva com sucesso!");
+              }}
+            >
+              <Text style={Styles.buttonText}>Salvar</Text>
             </TouchableOpacity>
           </View>
         </View>

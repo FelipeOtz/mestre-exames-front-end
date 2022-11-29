@@ -14,6 +14,24 @@ export default StyleSheet.create({
     width: "90%",
     height: "35%",
     borderRadius: 15,
+    bottom: -60,
+  },
+  panel2: {
+    backgroundColor: "#14486F",
+    flexDirection: "row",
+    width: "90%",
+    height: "35%",
+    borderRadius: 15,
+    bottom: -20,
+  },
+  panel2: {
+    backgroundColor: "#14486F",
+    flexDirection: "row",
+    width: "90%",
+    height: "35%",
+    borderRadius: 15,
+    position: "absolute",
+    bottom: -30,
   },
   panelText: {
     color: "#FFFFFF",
@@ -48,6 +66,33 @@ export default StyleSheet.create({
     textShadowColor: "#1f1f1f",
     textShadowOffset: { width: 0, height: 2 },
     textShadowRadius: 2,
+  },
+  textName: {
+    color: "#FFF",
+    fontWeight: "bold",
+    fontSize: 30,
+    textShadowColor: "#1f1f1f",
+    textShadowOffset: { width: 0, height: 2 },
+    textShadowRadius: 2,
+    position: "absolute",
+    top: 110,
+    left: 15,
+  },
+
+  textName2: {
+    color: "#FFF",
+    fontWeight: "bold",
+    fontSize: 17,
+    textShadowColor: "#1f1f1f",
+    textShadowOffset: { width: 0, height: 2 },
+    textShadowRadius: 2,
+    position: "absolute",
+    top: 290,
+    zIndex: 3,
+    backgroundColor: "#14486F",
+    width: "90%",
+    borderRadius: 5,
+    textAlign: "center",
   },
 
   cardHeaderPin: {
@@ -124,5 +169,49 @@ export default StyleSheet.create({
   examIcon: {
     width: 40,
     height: 40,
+  },
+  logo: {
+    width: 600,
+    height: 400,
+    top: -50,
+    left: -120,
+
+    position: "absolute",
+    resizeMode: "contain",
+  },
+  chat: {
+    width: 230,
+    height: 100,
+    resizeMode: "contain",
+  },
+  lilly: {
+    width: 160,
+    height: 400,
+    top: -50,
+    right: -15,
+    position: "absolute",
+    resizeMode: "contain",
+  },
+  account: {
+    width: 50,
+    height: 400,
+
+    resizeMode: "contain",
+  },
+  accountBtn: {
+    width: 50,
+    height: 50,
+    top: -130,
+    left: 20,
+    position: "absolute",
+    resizeMode: "contain",
+  },
+  chatbutton: {
+    width: 230,
+    height: 400,
+    top: 140,
+    left: 20,
+    position: "absolute",
+    resizeMode: "contain",
   },
 });
