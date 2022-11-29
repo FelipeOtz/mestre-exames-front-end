@@ -11,7 +11,6 @@ export default StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     color: "orange",
-
   },
   image: {
     alignItems: "center",
@@ -48,13 +47,12 @@ export default StyleSheet.create({
     color: "#a1a1a1",
     paddingStart: 10,
     color: "#FFF",
-
   },
   textCima: {
     color: "#a1a1a1",
     paddingStart: 10,
     color: "#FFF",
-    marginTop: 55
+    marginTop: 55,
   },
   button: {
     backgroundColor: "#FFF",
@@ -71,7 +69,7 @@ export default StyleSheet.create({
     alignSelf: "center",
     alignItems: "center",
     justifyContent: "center",
-  },  
+  },
   buttonText: {
     fontSize: 15,
     color: "#FFF",

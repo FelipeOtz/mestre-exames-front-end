@@ -73,6 +73,12 @@ export default StyleSheet.create({
     color: "#F9C259",
     paddingStart: 10,
   },
+
+  wrong: {
+    color: "red",
+    alignSelf: "center",
+    fontSize: 16,
+  },
   socialButtons: {
     flexDirection: "row",
     justifyContent: "space-between",

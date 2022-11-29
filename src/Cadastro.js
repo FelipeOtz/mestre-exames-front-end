@@ -15,27 +15,30 @@ import DateTimePicker from "@react-native-community/datetimepicker";
 
 import Styles from "../styles/cadastro";
 
-
-const MENSAGEM_NOME = 'Digite o seu nome';
-const MENSAGEM_EMAIL = 'Digite o seu email';
-const MENSAGEM_SENHA = 'Digite a sua senha';
-const MENSAGEM_CELULAR = 'Digite o seu celular';
-
+const MENSAGEM_NOME = "Digite o seu nome";
+const MENSAGEM_EMAIL = "Digite o seu email";
+const MENSAGEM_SENHA = "Digite a sua senha";
+const MENSAGEM_CELULAR = "Digite o seu celular";
 
 export default function Cadastro({ navigation }) {
   const [date, setDate] = useState(new Date());
   const [show, setShow] = useState(Platform.OS === "ios" ? true : false);
 
-
-const [usrNome, setUsrNome] = useState('');
-const [usrEmail, setUsrEmail] = useState('');
-const [usrSenha, setUsrSenha] = useState('');
-const [usrCelular, setUsrCelular] = useState('');
+  const [usrNome, setUsrNome] = useState("");
+  const [usrEmail, setUsrEmail] = useState("");
+  const [usrSenha, setUsrSenha] = useState("");
+  const [usrCelular, setUsrCelular] = useState("");
 
   let usuario = {
+    imageURL: "teste.png",
     nome: usrNome,
     cpf: "",
-    data_nasc: date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear(),
+    data_nasc:
+      String(date.getDate()).padStart(2, "0") +
+      "/" +
+      String(date.getMonth() + 1).padStart(2, "0") +
+      "/" +
+      date.getFullYear(),
     sexo: "",
     observacao: "",
     celular: usrCelular,
@@ -49,9 +52,8 @@ const [usrCelular, setUsrCelular] = useState('');
     bairro: "",
     complemento: "",
     senha: usrSenha,
-    convenio: ""
+    convenio: "",
   };
-
 
   const onChange = (event, selectedDate) => {
     const currentDate = selectedDate;
@@ -60,8 +62,6 @@ const [usrCelular, setUsrCelular] = useState('');
     setShow(Platform.OS === "android" ? false : show);
     console.log(event.type);
   };
-
-
 
   return (
     <View style={Styles.container}>
@@ -79,12 +79,16 @@ const [usrCelular, setUsrCelular] = useState('');
             <Text style={Styles.title}>Cadastro</Text>
           </View>
           <Text style={Styles.text}>Nome</Text>
-          <TextInput style={Styles.input} 
-          defaultValue={''}
-          onChangeText={(value) => setUsrNome(value)}/>
+          <TextInput
+            style={Styles.input}
+            defaultValue={""}
+            onChangeText={(value) => setUsrNome(value)}
+          />
           <Text style={Styles.text}>Email</Text>
-          <TextInput style={Styles.input}
-          onChangeText={(value) => setUsrEmail(value)} />
+          <TextInput
+            style={Styles.input}
+            onChangeText={(value) => setUsrEmail(value)}
+          />
           <Text style={Styles.text}>Senha</Text>
           <TextInput
             style={Styles.input}
@@ -102,7 +106,9 @@ const [usrCelular, setUsrCelular] = useState('');
                   onPress={() => setShow(true)}
                 >
                   <Text style={Styles.buttonText}>
-                    {date.getDate()}/{date.getMonth() + 1}/{date.getFullYear()}
+                    {String(date.getDate()).padStart(2, "0")}/
+                    {String(date.getMonth() + 1).padStart(2, "0")}/
+                    {date.getFullYear()}
                   </Text>
                 </TouchableOpacity>
               </>
@@ -135,18 +141,18 @@ const [usrCelular, setUsrCelular] = useState('');
           </View>
 
           <Text style={Styles.text}>Celular</Text>
-          <TextInput style={Styles.input}
-          onChangeText={(value) => setUsrCelular(value)} />
+          <TextInput
+            style={Styles.input}
+            onChangeText={(value) => setUsrCelular(value)}
+          />
 
           <TouchableOpacity
             style={Styles.button2}
             onPress={() =>
-              ValidateCadastro(
-                usrNome,
-                usrEmail,
-                usrSenha,
-                usrCelular,
-              ) && navigation.navigate('Cadastro2', usuario)}>
+              ValidateCadastro(usrNome, usrEmail, usrSenha, usrCelular) &&
+              navigation.navigate("Cadastro2", usuario)
+            }
+          >
             <Text style={Styles.buttonText2}>Avançar</Text>
           </TouchableOpacity>
 
@@ -159,7 +165,7 @@ const [usrCelular, setUsrCelular] = useState('');
                 paddingTop: 10,
               }}
             >
-              Ou logar
+              Ou login
             </Text>
           </TouchableOpacity>
         </View>
