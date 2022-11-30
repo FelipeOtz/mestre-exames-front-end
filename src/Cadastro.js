@@ -10,6 +10,7 @@ import {
   TextInput,
   Alert,
   Button,
+  Platform,
 } from "react-native";
 import DateTimePicker from "@react-native-community/datetimepicker";
 
