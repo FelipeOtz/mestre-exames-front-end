@@ -50,14 +50,14 @@ export default function ({ navigation }) {
             <TouchableOpacity
               style={Styles.selectButtonEnabled}
               activeOpacity={0.9}
-              onPress={() => navigation.navigate("Agendar6", {unidade: route.params.nome, exame: route.params.exame})}
+              onPress={() => navigation.navigate("Agendar6")}
             > 
-            <Text style={Styles.selectButtonText}>Selecionar data</Text>
+            {/* <Text style={Styles.selectButtonText}>{route.params.dataAgendamento} - {route.params.horarioAgendamento}</Text> */}
             </TouchableOpacity>
         </View>
         <View style={Styles.stepDiv}>
-        <TouchableOpacity style={Styles.selectButtonDisabled}>
-        <Text style={Styles.AgendarButtonTextDisabled}>Agendar</Text>
+        <TouchableOpacity style={Styles.selectButtonEnabled}>
+        <Text style={Styles.AgendarButtonTextEnabled}>Agendar</Text>
         </TouchableOpacity>
         </View>
 

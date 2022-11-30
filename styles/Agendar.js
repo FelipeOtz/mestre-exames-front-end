@@ -68,6 +68,12 @@ const Styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 20
   },
+  AgendarButtonTextEnabled:{
+    color: '#FFF',
+    textAlign: 'center',
+    fontWeight: 'bold',
+    fontSize: 20
+  },
   TelaAgendarTitle: {
     marginBottom: 25,
     color: "#3779f4",
@@ -154,6 +160,50 @@ const Styles = StyleSheet.create({
     color: '#FFF',
     textTransform: 'uppercase',
     fontWeight: 'bold'
+  },
+  TelaAgendarCalendarContainer: {
+    width: '90%',
+    alignSelf: 'center'
+  },
+  agendarHorariosBoxTitle: {
+    color: "#3779f4",
+    fontSize: 19,
+    fontWeight: "bold",
+    alignSelf: 'center',
+    marginVertical: 25
+  },
+  horariosDisponiveisContainer: {
+    width: 310,
+    marginBottom: 30
+  },
+  horariosDisponiveisBg :{
+    backgroundColor: '#90e0ef',
+    margin: 5,
+    padding: 5,
+    borderRadius: 10
+  },
+  horariosDisponiveisTxt :{
+    color: '#000',
+    fontWeight: 'bold',
+    fontSize: 19
+  },
+  btnConfirmar: {
+    backgroundColor: '#3779f4',
+    width: 300,
+    height: 50,
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignSelf: 'center',
+    borderRadius: 35,
+  },
+  btnConfirmarTxt: {
+    fontWeight: 'bold',
+    color: '#FFF',
+    fontSize: 20
+  },
+  txtConfirmar: {
+    fontSize: 16,
+    alignSelf: 'center',
   }
 });
 

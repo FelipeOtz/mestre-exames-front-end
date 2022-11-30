@@ -15,6 +15,8 @@ import Agendar2 from "./src/components/Agendar2";
 import Agendar3 from "./src/components/Agendar3";
 import Agendar4 from "./src/components/Agendar4";
 import Agendar5 from "./src/components/Agendar5";
+import Agendar6 from "./src/components/Agendar6";
+import Agendar7 from "./src/components/Agendar7";
 
 import Chat from "./src/Chat";
 
@@ -35,6 +37,8 @@ export default function App() {
         <Stack.Screen name="Agendar3" component={Agendar3} />
         <Stack.Screen name="Agendar4" component={Agendar4} />
         <Stack.Screen name="Agendar5" component={Agendar5} />
+        <Stack.Screen name="Agendar6" component={Agendar6} />
+        <Stack.Screen name="Agendar7" component={Agendar7} />
       </Stack.Navigator>
     </NavigationContainer>
     // <Chat/>
