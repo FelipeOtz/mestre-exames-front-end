@@ -85,16 +85,18 @@ const Styles = StyleSheet.create({
     flexDirection: 'row',
     backgroundColor: "#3779f4",
     alignItems: 'center',
-    marginBottom: 5,
+    marginBottom: 1,
+    paddingVertical: 10
   },
   TelaAgendarexamIcon:{
     width: 40,
     height: 40,
     padding: 5,
+    marginHorizontal: 15
   },
   TelaAgendarExamItemNome:{
     color: '#FFF',
-    fontSize: 17
+    fontSize: 19
   },
   unidadeBox: {
     justifyContent: 'space-between',

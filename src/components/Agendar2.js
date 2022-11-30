@@ -34,7 +34,7 @@ export default function ({ navigation }, props) {
             underlayColor="#3779f4"
             onPress={()=> Alert.alert(
               "Detalhes do Exame",
-              `${item.descricao}\n\nRecomendações: ${item.recomendacao}\nDuração: ${item.duracao} minutos`,
+              `${item.descricao}\n\nRecomendações: ${item.recomendacao}\n\nDuração: ${item.duracao} minutos`,
               [
                 {
                   text: 'Agendar', onPress: ()=> {navigation.navigate('Agendar3', {exame: item.nome})}
