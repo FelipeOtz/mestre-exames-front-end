@@ -50,7 +50,7 @@ export default function ({ navigation }) {
             <TouchableOpacity
               style={Styles.selectButtonEnabled}
               activeOpacity={0.9}
-              onPress={() => navigation.navigate("Agendar6", {unidade: route.params.nome, exame: route.params.exame})}
+              onPress={() => navigation.navigate("Agendar6", {unidade: route.params.unidade, exame: route.params.exame})}
             > 
             <Text style={Styles.selectButtonText}>Selecionar data</Text>
             </TouchableOpacity>

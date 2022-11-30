@@ -50,13 +50,34 @@ export default function ({ navigation }) {
             <TouchableOpacity
               style={Styles.selectButtonEnabled}
               activeOpacity={0.9}
-              onPress={() => navigation.navigate("Agendar6")}
+              // onPress={() => navigation.navigate("Agendar6")}
             > 
-            {/* <Text style={Styles.selectButtonText}>{route.params.dataAgendamento} - {route.params.horarioAgendamento}</Text> */}
+            <Text style={Styles.selectButtonText}>{route.params.dataAgendamento} - {route.params.horarioAgendamento}</Text>
             </TouchableOpacity>
         </View>
         <View style={Styles.stepDiv}>
-        <TouchableOpacity style={Styles.selectButtonEnabled}>
+        <TouchableOpacity
+          style={Styles.selectButtonEnabled}
+          onPress={()=> 
+            Alert.alert(
+              "Exame Agendado com Sucesso!",
+              'Detalhes do Agendamento: ' +
+              '\n\nID: ' + Math.floor(100000000 + Math.random() * 900000000) + 
+              '\nExame: ' + route.params.exame +
+              '\nUnidade: ' + route.params.unidade +
+              '\nData: ' + route.params.dataAgendamento +
+              '\nHorario: ' + route.params.horarioAgendamento
+
+            ,
+              [
+                {
+                  text: 'ok',
+                  onPress: () => navigation.navigate("Home")
+                }
+              ]
+              )
+            }
+        >
         <Text style={Styles.AgendarButtonTextEnabled}>Agendar</Text>
         </TouchableOpacity>
         </View>

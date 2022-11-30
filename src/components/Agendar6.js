@@ -55,7 +55,10 @@ export default function ({ navigation }, props) {
                 onDayPress={day =>  setDates({day})}
             />
             
-          <Text style={Styles.agendarHorariosBoxTitle}>Horários Disponíveis para {day}/{month}/{year}</Text>
+          <View style={Styles.agendarHorariosBoxTitle}>
+            <Text style={Styles.agendarHorariosTxt}>Horários Disponíveis para </Text>
+            <Text style={Styles.agendarHorariosTx2}>{day}/{month}/{year}</Text>
+          </View>
           </View>
           
           <View>
@@ -78,11 +81,13 @@ export default function ({ navigation }, props) {
           </View>
           <TouchableOpacity
             style={Styles.btnConfirmar}
-            onPress={()=> navigation.navigate("Agendar7",
+            onPress={()=> 
+              navigation.navigate("Agendar7",
               {
                 unidade: route.params.unidade,
-                exame: route.param.exame,
-                  
+                exame: route.params.exame,
+                dataAgendamento: `${day}/${month}/${year}`,
+                horarioAgendamento: horario
               })}>
 
 
@@ -91,7 +96,7 @@ export default function ({ navigation }, props) {
             <Text style={Styles.btnConfirmarTxt}>CONFIRMAR</Text>
           </TouchableOpacity>
 
-          <Text style={Styles.txtConfirmar}>Agendar Exame para {day}/{month}/{year} - {horario}</Text>
+          <Text style={Styles.txtConfirmar}>Exame para {day}/{month}/{year} - {horario}</Text>
 
     </View>
     )}

@@ -166,11 +166,19 @@ const Styles = StyleSheet.create({
     alignSelf: 'center'
   },
   agendarHorariosBoxTitle: {
+
+    alignSelf: 'center',
+    marginVertical: 25,
+    flexDirection: 'row'
+  },
+  agendarHorariosTxt :{
+    color: "#3779f4",
+    fontSize: 19,    
+  },
+  agendarHorariosTx2 :{
     color: "#3779f4",
     fontSize: 19,
-    fontWeight: "bold",
-    alignSelf: 'center',
-    marginVertical: 25
+    fontWeight: "bold",    
   },
   horariosDisponiveisContainer: {
     width: 310,
@@ -204,6 +212,9 @@ const Styles = StyleSheet.create({
   txtConfirmar: {
     fontSize: 16,
     alignSelf: 'center',
+    color: "#3779f4",
+    fontSize: 19,
+    fontWeight: "bold",    
   }
 });
 
